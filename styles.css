@@ -50,3 +50,10 @@ h1 {
 .reset-button {
     margin-left: 20px;
 }
+
+.remove-book-button {
+    grid-row: 5 / 6;
+    font-weight: 900;
+    background-color: rgb(223, 117, 117);
+    border-radius: 10px;
+}
