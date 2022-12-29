@@ -15,6 +15,7 @@ function Book(title, author, pages, read) {
 function addBookToLibrary(title, author, pages, read) {
     let book = new Book(title, author, pages, read);
     myLibrary.push(book);
+    displayBooksOnPage();
 }
 
 //Display library array to cards
@@ -32,6 +33,14 @@ function displayBooksOnPage() {
             card.appendChild(para);
         }
     })
+}
+
+// Display form to add new book
+const addBookButton = document.querySelector(".add-book-button");
+addBookButton.addEventListener("click", displayForm);
+
+function displayForm() {
+    document.getElementById("add-book-form").style.display = "";
 }
 
 addBookToLibrary("The Hobbit", "Tolkien", "295", "Not");
