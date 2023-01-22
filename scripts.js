@@ -66,8 +66,8 @@ function createReadElement(bookItem, book) {
     read.appendChild(input);
     return read;
   }
-
-  function fillOutEditForm(book) {
+// Populate the form when edit is selected
+function fillOutEditForm(book) {
     modal.style.display = "block";
     document.querySelector(".form-title").textContent = "Edit Book";
     document.querySelector(".form-add-button").textContent = "Edit";
@@ -79,7 +79,7 @@ function createReadElement(bookItem, book) {
   }
   
   //create the edit icon w/ event listener
-  function createEditIcon(book) {
+function createEditIcon(book) {
     const editIcon = document.createElement("img");
     editIcon.src = "pencil.svg";
     editIcon.setAttribute("class", "edit-icon");
@@ -224,12 +224,5 @@ function intakeFormData() {
     document.getElementById("add-book").reset();
 }
 
-// Clear/reset form
-const clearButton = document.querySelector(".reset-button");
-clearButton.addEventListener("click", clearForm);
-
-function clearForm() {
-    document.getElementById("add-book").reset();
-}
 
 
