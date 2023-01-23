@@ -18,12 +18,14 @@ let myLibrary = [];
 
 
 // Object constructor
-function Book(title, author, pages, read) {
+class Book {
+  constructor(title, author, pages, read) {
     this.title = title;
     this.author = author;
     this.pages = pages;
     this.read = read;
     this.id = Math.floor(Math.random() * 1000000);
+  }
 }
 
 // Add book to library
