@@ -226,5 +226,47 @@ function intakeFormData() {
     document.getElementById("add-book").reset();
 }
 
+const constraintValidation = (() => {
+  const valTitle = document.getElementById("book-title");
+
+  valTitle.addEventListener("input", () => {
+    valTitle.setCustomValidity("");
+    valTitle.checkValidity();
+  });
+
+  valTitle.addEventListener("invalid", () => {
+    if (valTitle.value === "") {
+      valTitle.setCustomValidity("Title cannot be blank");
+    }
+  });
+
+  const valAuthor = document.getElementById("book-author");
+
+  valAuthor.addEventListener("input", () => {
+    valAuthor.setCustomValidity("");
+    valAuthor.checkValidity();
+  });
+
+  valAuthor.addEventListener("invalid", () => {
+    if (valAuthor.value === "") {
+      valAuthor.setCustomValidity("Author cannot be blank");
+    }
+  });
+
+  const valPages = document.getElementById("book-pages");
+
+  valPages.addEventListener("input", () => {
+    valPages.setCustomValidity("");
+    valPages.checkValidity();
+  });
+
+  valPages.addEventListener("invalid", () => {
+    if (valPages.value === "") {
+      valPages.setCustomValidity("Must enter number of pages");
+    }
+  });
+
+
+})();
 
 
